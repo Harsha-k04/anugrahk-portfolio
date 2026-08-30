@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Anugrah — Media Production Lead, photographer, videographer and visual storyteller." />
+<meta name="theme-color" content="#0a0a0a" />
+<title>Anugrah — Media Production Lead</title>
+<link rel="icon" href="assets/hero/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--fg:#f2efe8;--muted:#9d9a94;--line:rgba(242,239,232,.16);--serif:"Playfair Display",Georgia,serif;--sans:"Manrope",Arial,sans-serif;--mono:"DM Mono",monospace}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;background:var(--bg)}body{background:var(--bg);color:var(--fg);font-family:var(--sans);overflow-x:hidden}body.no-scroll{overflow:hidden}img,video{display:block;width:100%}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}::selection{background:var(--fg);color:var(--bg)}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:80;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+.cursor{position:fixed;width:10px;height:10px;border:1px solid var(--fg);border-radius:50%;pointer-events:none;z-index:100;transform:translate(-50%,-50%);transition:.25s;mix-blend-mode:difference}.cursor.big{width:58px;height:58px;background:var(--fg)}
+.nav{position:fixed;z-index:70;top:0;left:0;right:0;padding:26px 4vw;display:flex;align-items:center;justify-content:space-between;mix-blend-mode:difference}.brand{font:12px var(--mono);letter-spacing:.16em}.navlinks{display:flex;gap:30px;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.hero{height:100svh;min-height:680px;position:relative;display:flex;align-items:flex-end;overflow:hidden}.hero-media{position:absolute;inset:0;background:#151515}.hero-media video,.hero-media img{height:100%;object-fit:cover;object-position:center}.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.18) 42%,rgba(0,0,0,.8))}.hero-copy{position:relative;z-index:2;padding:0 6vw 8vh;width:100%}.eyebrow,.kicker{font:10px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#c7c3bb}.eyebrow{margin-bottom:22px}.hero h1{font-size:clamp(70px,15vw,220px);line-height:.78;letter-spacing:-.075em;font-weight:600}.hero h1 span{display:block;font:500 italic clamp(62px,11vw,170px)/.82 var(--serif);letter-spacing:-.055em;margin-left:8vw}.hero-bottom{display:flex;justify-content:space-between;align-items:end;margin-top:34px;max-width:900px}.hero-tag{font-size:clamp(15px,1.5vw,21px);line-height:1.35;max-width:430px;color:#dedbd4}.scroll{font:9px var(--mono);letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:12px}.scroll i{width:45px;height:1px;background:var(--fg);animation:pulse 1.7s infinite}@keyframes pulse{50%{width:75px}}
+section{padding:13vw 6vw}.intro{min-height:75vh;display:flex;align-items:center}.intro-inner{max-width:1180px}.kicker{margin-bottom:40px;color:var(--muted)}.statement{font-size:clamp(42px,6.5vw,100px);line-height:.98;letter-spacing:-.06em;font-weight:500}.statement em,.section-title em,.contact-title em{font-family:var(--serif);font-style:italic;font-weight:500}.intro-sub{max-width:620px;margin:55px 0 0 auto;color:var(--muted);font-size:15px;line-height:1.8}.rule{border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:65px}.section-title{font-size:clamp(45px,7vw,100px);line-height:.9;letter-spacing:-.065em}.section-number{font:10px var(--mono);color:var(--muted)}
+.work-item{position:relative;margin-bottom:12vw;display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:end}.work-item:nth-child(even){grid-template-columns:1.15fr .85fr}.work-visual{height:min(70vh,760px);overflow:hidden;background:#161616;position:relative;cursor:pointer}.work-item:nth-child(even) .work-visual{height:min(58vh,620px)}.work-visual img,.work-visual video{height:100%;object-fit:cover}.work-visual.project-portrait img{object-position:center 30%}.work-visual.project-cover-tilted{display:flex;align-items:center;justify-content:center;overflow:hidden}.work-visual.project-cover-tilted img{object-fit:contain;transform:rotate(-90deg);transform-origin:center;max-height:none;max-width:none;flex:none}.work-info{padding-bottom:12px}.work-meta{font:9px var(--mono);letter-spacing:.15em;color:var(--muted);text-transform:uppercase;margin-bottom:22px}.work-title{font-size:clamp(32px,4.5vw,68px);letter-spacing:-.055em;line-height:.95;margin-bottom:22px}.work-desc{color:var(--muted);font-size:14px;line-height:1.7;max-width:440px}.work-role{font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;margin-top:30px;color:#c5c1b9}.work-link{display:inline-flex;align-items:center;gap:12px;margin-top:28px;font:9px var(--mono);letter-spacing:.13em;text-transform:uppercase}.work-link:after{content:"↗";font-size:15px}
+.photo-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start}.photo-col{display:flex;flex-direction:column;gap:18px}.photo{overflow:hidden;background:#151515;position:relative;cursor:pointer;display:block}.photo.tall,.photo.medium,.photo.short{height:auto}.photo img{display:block;width:100%;height:auto;object-fit:initial;object-position:center;background:#151515}.photo.contain img{object-fit:initial;background:#111}.photo.featured-first{transform:none;margin:0}.photo.featured-first img{transform:none;width:100%;height:auto;object-fit:initial;object-position:center}.photo-col:nth-child(1) .photo:nth-child(2) img,.photo-col:nth-child(1) .photo:nth-child(3) img,.photo-col:nth-child(2) .photo:nth-child(1) img,.photo-col:nth-child(2) .photo:nth-child(2) img,.photo-col:nth-child(2) .photo:nth-child(3) img{object-position:center}.photo:after{content:"VIEW IMAGE";position:absolute;bottom:18px;left:18px;font:8px var(--mono);letter-spacing:.15em;background:rgba(0,0,0,.55);padding:8px 10px;opacity:0;transform:translateY(8px);transition:.35s}.photo:hover:after{opacity:1;transform:none}
+.video-feature{height:78vh;background:#111;position:relative;overflow:hidden}.video-feature video{height:100%;object-fit:cover}.video-feature.vertical video{object-fit:contain;background:#050505}.video-overlay{position:absolute;inset:auto 5vw 5vw;display:flex;justify-content:space-between;align-items:end;pointer-events:none}.play{width:78px;height:78px;border:1px solid rgba(255,255,255,.7);border-radius:50%;display:grid;place-items:center;font-size:20px;pointer-events:auto}.video-title{font-size:clamp(38px,6vw,90px);letter-spacing:-.06em}
+/* HOMEPAGE — three portrait videos inside one landscape frame */
+.video-feature.video-triple{
+  width:100%;
+  height:auto;
+  aspect-ratio:16/9;
+  background:#050505;
+  position:relative;
+  overflow:hidden;
+}
+.video-triple-grid{
+  position:absolute;
+  inset:0;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+  background:#050505;
+}
+.video-tile{
+  position:relative;
+  min-width:0;
+  min-height:0;
+  overflow:hidden;
+  background:#050505;
+}
+.video-triple-grid video{
+  display:block;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  object-fit:cover;
+  object-position:center;
+  background:#050505;
+}
+.video-triple .video-play{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  z-index:4;
+  margin:0;
+  width:78px;
+  height:78px;
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:20px;
+  color:#fff;
+  background:rgba(0,0,0,.18);
+  backdrop-filter:blur(3px);
+  cursor:pointer;
+}
+.video-copy-overlay{
+  position:absolute;
+  z-index:5;
+  left:34%;
+  right:4%;
+  bottom:8%;
+  pointer-events:none;
+  text-align:left;
+  color:#fff;
+  text-shadow:0 2px 18px rgba(0,0,0,.7);
+}
+.video-copy-overlay .eyebrow{
+  margin-bottom:10px;
+  color:#fff;
+}
+.video-copy-overlay .video-title{
+  font-size:clamp(34px,6vw,90px);
+  line-height:.9;
+  letter-spacing:-.06em;
+  white-space:nowrap;
+}
+.video-copy-below{
+  margin-top:32px;
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:30px;
+}
+.video-copy-below .eyebrow{
+  margin-bottom:0;
+}
+.video-copy-below .video-title{
+  font-size:clamp(34px,6vw,90px);
+  line-height:.9;
+  letter-spacing:-.06em;
+  white-space:nowrap;
+}
+
+.process{background:#111}.process-list{border-top:1px solid var(--line)}.process-step{display:grid;grid-template-columns:80px 1fr auto;gap:30px;padding:38px 0;border-bottom:1px solid var(--line);align-items:baseline}.process-no,.process-arrow{font:10px var(--mono);color:var(--muted)}.process-name{font-size:clamp(30px,4vw,58px);letter-spacing:-.045em}.process-note{max-width:310px;color:var(--muted);font-size:13px;line-height:1.6}
+.compare{height:auto;aspect-ratio:16/9;position:relative;overflow:hidden;background:#161616;--split:50%}.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.compare .after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--split))}.compare-line{position:absolute;top:0;bottom:0;left:var(--split);width:1px;background:white;z-index:2}.compare-handle{position:absolute;left:var(--split);top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border:1px solid white;border-radius:50%;z-index:3;display:grid;place-items:center;background:rgba(0,0,0,.3)}.compare-label{position:absolute;top:18px;font:9px var(--mono);letter-spacing:.14em;z-index:4;padding:8px 10px;background:rgba(0,0,0,.45)}.compare-label.raw{left:18px}.compare-label.final{right:18px}.compare input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw;align-items:center}.portrait{height:78vh;background:#151515;overflow:hidden}.portrait img{height:100%;object-fit:cover}.about-copy .big{font-size:clamp(38px,5.5vw,78px);line-height:1;letter-spacing:-.06em;margin-bottom:40px}.about-copy p{color:var(--muted);font-size:15px;line-height:1.9;max-width:560px}.bts-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:start}.bts-strip .photo{height:auto;overflow:hidden;background:#151515}.bts-strip .photo img,.bts-strip .photo video{display:block;width:100%;height:auto;object-fit:contain;background:#111}
+.services{display:grid;grid-template-columns:1fr 2fr;gap:8vw}.service-list{border-top:1px solid var(--line)}.service{font-size:clamp(30px,4vw,58px);letter-spacing:-.05em;padding:25px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}.service span{font:9px var(--mono);color:var(--muted);align-self:center}.timeline{border-top:1px solid var(--line)}.timeline-item{display:grid;grid-template-columns:100px 1fr 1.5fr;gap:30px;padding:35px 0;border-bottom:1px solid var(--line)}.timeline-year{font:10px var(--mono);color:var(--muted)}.timeline-role{font-size:22px}.timeline-desc{color:var(--muted);font-size:13px;line-height:1.7}
+.contact{min-height:82vh;display:flex;flex-direction:column;justify-content:space-between}.contact-title{font-size:clamp(65px,12vw,180px);line-height:.8;letter-spacing:-.08em}.contact-bottom{display:flex;justify-content:space-between;align-items:end}.contact-copy{max-width:420px;color:var(--muted);font-size:14px;line-height:1.7}.contact-email{font-size:clamp(18px,2.5vw,32px);border-bottom:1px solid var(--fg);padding-bottom:7px}footer{padding:28px 6vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;font:9px var(--mono);letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.lightbox,.project-modal{position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:90;display:none}.lightbox.open,.project-modal.open{display:flex}.lightbox{align-items:center;justify-content:center;padding:5vw}.lightbox img,.lightbox video{max-width:94vw;max-height:88vh;width:auto;height:auto}.close{position:absolute;right:28px;top:24px;font:11px var(--mono);letter-spacing:.12em;z-index:4}.project-modal{overflow:auto;align-items:flex-start;justify-content:center;padding:8vh 5vw}.project-inner{width:min(1180px,100%)}.project-top{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:55px}.project-kicker{font:9px var(--mono);letter-spacing:.15em;color:var(--muted);text-transform:uppercase;margin-bottom:15px}.project-title{font-size:clamp(55px,9vw,125px);line-height:.85;letter-spacing:-.07em}.project-intro{max-width:400px;color:var(--muted);font-size:14px;line-height:1.7}.project-media{margin:30px 0;background:#111;overflow:hidden}.project-media img{max-height:82vh;object-fit:contain;margin:auto}.project-media video{max-height:82vh;object-fit:contain;background:#050505}.project-media.project-cover-landscape{position:relative;display:block;overflow:hidden;background:#111;margin:30px 0}.project-media.project-cover-landscape img{position:absolute;left:50%;top:50%;display:block;max-width:none;max-height:none;width:auto;height:auto;object-fit:fill;transform-origin:center;transform:translate(-50%,-50%) rotate(-90deg)}/* Project galleries: let every frame follow the media aspect ratio instead of cropping it. */
+.project-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0;align-items:start}
+.project-gallery .gallery-item{background:#111;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.project-gallery img,.project-gallery video{display:block;width:100%;height:auto;object-fit:contain;background:#111}
+.project-gallery video{background:#050505}
+
+.project-role{padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:40px}.project-description{max-width:700px;color:#c9c5bd;font-size:16px;line-height:1.9;margin:35px 0 70px}.modal-nav{display:flex;justify-content:space-between;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;padding-bottom:50px}
+@media(max-width:800px){.cursor{display:none}.nav{padding:20px 5vw}.navlinks{gap:14px;font-size:8px}.navlinks a:nth-child(3){display:none}.hero-copy{padding:0 5vw 8vh}.hero h1{font-size:23vw}.hero h1 span{font-size:17vw;margin-left:5vw}.hero-bottom{display:block}.scroll{margin-top:28px}section{padding:22vw 5vw}.intro{min-height:auto}.intro-sub{margin-top:35px}.section-head{margin-bottom:40px}.work-item,.work-item:nth-child(even){grid-template-columns:1fr;gap:25px;margin-bottom:25vw}.work-visual,.work-item:nth-child(even) .work-visual{height:60vh}.photo-grid{grid-template-columns:1fr}.photo.tall,.photo.medium,.photo.short{height:auto}.photo.featured-first{margin:0;transform:none}.photo.featured-first img{transform:none;object-fit:initial}.video-feature{height:62vh}.video-feature.video-triple{height:auto;aspect-ratio:16/9}.video-triple-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1px}.video-triple .video-play{width:56px;height:56px;font-size:16px}.video-copy-overlay{left:32%;right:3%;bottom:12%}.video-copy-overlay .video-title{font-size:clamp(22px,7vw,52px);white-space:normal}.video-copy-below{display:block;margin-top:24px}.video-copy-below .video-title{font-size:clamp(32px,9vw,58px);white-space:normal;margin-top:10px}.video-overlay{display:block}.play{margin-bottom:20px}.process-step{grid-template-columns:45px 1fr}.process-note{grid-column:2}.compare{height:auto;aspect-ratio:16/9}.about-grid,.services{grid-template-columns:1fr;gap:45px}.portrait{height:65vh}.bts-strip{grid-template-columns:1fr}.bts-strip .photo{height:auto}.bts-strip .photo:last-child{display:block}.timeline-item{grid-template-columns:65px 1fr}.timeline-desc{grid-column:2}.contact{min-height:75vh}.contact-bottom{display:block}.contact-email{display:inline-block;margin-top:35px}footer{padding:24px 5vw;gap:15px;flex-direction:column}.project-modal{padding:14vh 5vw 5vh}.project-top{display:block}.project-intro{margin-top:25px}.project-gallery{grid-template-columns:1fr}.project-gallery img{height:auto}.project-media.project-cover-landscape{display:flex;align-items:center;justify-content:center}}
+
+/* HOMEPAGE — Project 02 cover/video only */
+.work-visual.project-02-home{
+  position:relative;
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  overflow:hidden;
+  background:#161616;
+}
+.work-visual.project-02-home video{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  background:#111;
+}
+
+/* HOMEPAGE — Project 01 cover only */
+.work-visual.project-portrait[data-project="p1"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  aspect-ratio: auto;
+}
+
+.work-visual.project-portrait[data-project="p1"] img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* HOMEPAGE — Project 01 cover: rotate the sideways source and size the frame to the final landscape image */
+.work-visual.project-cover-home {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #161616;
+}
+
+.work-visual.project-cover-home img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 75%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: fill;
+  margin: 0;
+  transform: translate(-50%,-50%) rotate(-90deg);
+  transform-origin: center;
+}
+
+
+/* HOMEPAGE — Project 03 ONLY: preserve the complete portrait cover inside a landscape frame */
+.work-visual.project-03-home{
+  position:relative;
+  width:100%;
+  height:auto;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:#050505;
+}
+.work-visual.project-03-home video{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  background:#050505;
+}
+
+/* BTS HOMEPAGE ONLY — editorial two-row layout
+   Top: camera photo + production video
+   Bottom: editing timeline spanning the full section
+   Every asset is contained completely; nothing is cropped. */
+#bts .bts-strip{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-areas:
+    "photo video"
+    "timeline timeline";
+  gap:24px;
+  align-items:start;
+}
+#bts .bts-strip .photo{
+  width:100%;
+  overflow:hidden;
+  background:#111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+#bts .bts-strip .photo:nth-child(1){
+  grid-area:photo;
+  aspect-ratio:3/4;
+}
+#bts .bts-strip .photo:nth-child(2){
+  grid-area:video;
+  aspect-ratio:3/4;
+}
+#bts .bts-strip .photo:nth-child(3){
+  grid-area:timeline;
+  aspect-ratio:16/9;
+}
+#bts .bts-strip .photo img,
+#bts .bts-strip .photo video{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  object-position:center;
+  background:#111;
+}
+@media(max-width:800px){
+  .work-visual.project-03-home{
+    width:100%;
+    height:auto !important;
+    aspect-ratio:16/9;
+  }
+  .work-visual.project-03-home video{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
+
+  #bts .bts-strip{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "photo"
+      "video"
+      "timeline";
+    gap:18px;
+  }
+  #bts .bts-strip .photo:nth-child(1),
+  #bts .bts-strip .photo:nth-child(2){
+    aspect-ratio:3/4;
+  }
+  #bts .bts-strip .photo:nth-child(3){
+    aspect-ratio:16/9;
+  }
+  #bts .bts-strip .photo img,
+  #bts .bts-strip .photo video{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
+}
+</style>
+</head>
+<body>
+<div class="grain"></div><div class="cursor"></div>
+<nav class="nav"><a class="brand" href="#top">ANUGRAH</a><div class="navlinks"><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+<header class="hero" id="top"><div class="hero-media"><video autoplay muted loop playsinline poster="assets/hero/hero-image.jpg"><source src="assets/hero/hero-video.mp4" type="video/mp4"></video></div><div class="hero-copy"><div class="eyebrow">Media Production Lead · Visual Storyteller</div><h1>Anugrah<span>brings it to life.</span></h1><div class="hero-bottom"><p class="hero-tag">I capture moments, shape stories, and turn ideas into visuals people remember.</p><div class="scroll"><i></i> Scroll to explore ↓</div></div></div></header>
+<section class="intro"><div class="intro-inner"><div class="kicker">01 / The point of view</div><h2 class="statement">Every story begins with a <em>moment.</em><br>I turn those moments into visuals people remember.</h2><p class="intro-sub">Photography · Videography · Editing · Production · Visual Storytelling</p></div></section>
+<section id="work"><div class="section-head"><h2 class="section-title">Selected<br><em>Work.</em></h2><span class="section-number">02 / Featured Projects</span></div>
+<article class="work-item"><div class="work-visual project-cover-home" data-project="p1"><img src="assets/projects/project-01/cover.jpg" alt="Bharatanatyam performance"></div><div class="work-info"><div class="work-meta">01 / Performance · Photography</div><h3 class="work-title">The First Frame</h3><p class="work-desc">A performance-focused visual series built around movement, expression, colour and precise moments captured through the lens.</p><div class="work-role">Role · Photographer / Visual Storyteller</div><button class="work-link" data-project="p1">View project</button></div></article>
+<article class="work-item"><div class="work-info"><div class="work-meta">02 / Campaign · Video</div><h3 class="work-title">A Day with Tiny Tom</h3><p class="work-desc">A behind-the-scenes driven short-form piece following a day through production, camera work, locations and character moments.</p><div class="work-role">Role · Videographer / Production / Editor</div><button class="work-link" data-project="p2">View project</button></div><div class="work-visual project-02-home" data-project="p2"><video muted loop playsinline poster="assets/projects/project-02/cover.jpg"><source src="assets/projects/project-02/video.mp4" type="video/mp4"></video></div></article>
+<article class="work-item"><div class="work-visual project-03-home" data-project="p3"><video muted loop playsinline poster="assets/projects/project-03/cover.jpg"><source src="assets/projects/project-03/video.mp4" type="video/mp4"></video></div><div class="work-info"><div class="work-meta">03 / Short Film · Motion</div><h3 class="work-title">Motion & Memory</h3><p class="work-desc">A cinematic short built around physicality, movement, atmosphere and fast visual storytelling.</p><div class="work-role">Role · Videographer / Editor</div><button class="work-link" data-project="p3">View project</button></div></article>
+</section>
+<section id="photography"><div class="section-head"><h2 class="section-title">Through<br>the <em>lens.</em></h2><span class="section-number">03 / Photography</span></div><div class="photo-grid">
+<div class="photo-col"><div class="photo tall featured-first" data-lightbox="assets/photography/IMG_1382.JPG"><img src="assets/photography/IMG_1382.JPG" alt="Bharatanatyam dancer"></div><div class="photo short" data-lightbox="assets/photography/IMG_0219.JPG"><img src="assets/photography/IMG_0219.JPG" alt="Bharatanatyam portrait"></div><div class="photo medium" data-lightbox="assets/photography/IMG_0142.JPG"><img src="assets/photography/IMG_0142.JPG" alt="Portrait photograph"></div></div>
+<div class="photo-col"><div class="photo medium" data-lightbox="assets/photography/IMG_0118.JPG"><img src="assets/photography/IMG_0118.JPG" alt="Bharatanatyam dancer close-up"></div><div class="photo tall" data-lightbox="assets/photography/IMG_0218.JPG"><img src="assets/photography/IMG_0218.JPG" alt="Group performance"></div><div class="photo short" data-lightbox="assets/photography/IMG_1593.JPG"><img src="assets/photography/IMG_1593.JPG" alt="Portrait photograph"></div></div>
+</div></section>
+<section id="video">
+  <div class="section-head">
+    <h2 class="section-title">Moving<br><em>stories.</em></h2>
+    <span class="section-number">04 / Videography</span>
+  </div>
+
+  <div class="video-feature video-triple">
+    <div class="video-triple-grid">
+      <div class="video-tile first-video">
+        <video controls playsinline>
+          <source src="assets/moving/video.mp4" type="video/mp4">
+        </video>
+        <button class="play video-play" aria-label="Play first video"><span>▶</span></button>
+      </div>
+
+      <div class="video-tile">
+        <video controls playsinline>
+          <source src="assets/moving/video-2.mp4" type="video/mp4">
+        </video>
+        <button class="play video-play" aria-label="Play second video"><span>▶</span></button>
+      </div>
+
+      <div class="video-tile">
+        <video controls playsinline>
+          <source src="assets/moving/video-3.mp4" type="video/mp4">
+        </video>
+        <button class="play video-play" aria-label="Play third video"><span>▶</span></button>
+      </div>
+    </div>
+
+  </div>
+  <div class="video-copy-below">
+    <div class="eyebrow">Showcase / 2026</div>
+    <div class="video-title">Motion & Memory</div>
+  </div>
+</section>
+<section id="process" class="process"><div class="section-head"><h2 class="section-title">From idea<br>to <em>final frame.</em></h2><span class="section-number">05 / Process</span></div><div class="process-list"><div class="process-step"><span class="process-no">01</span><span class="process-name">Concept</span><span class="process-note">Understand the idea, story, audience and visual objective.</span></div><div class="process-step"><span class="process-no">02</span><span class="process-name">Plan</span><span class="process-note">Shape the shoot, locations, visuals, production and practical details.</span></div><div class="process-step"><span class="process-no">03</span><span class="process-name">Capture</span><span class="process-note">Photography and videography with attention to light, framing and movement.</span></div><div class="process-step"><span class="process-no">04</span><span class="process-name">Edit</span><span class="process-note">Select, cut, grade and shape raw material into a coherent visual story.</span></div><div class="process-step"><span class="process-no">05</span><span class="process-name">Deliver</span><span class="process-note">Create the final visual built for its audience, platform and purpose.</span></div></div></section>
+<section id="editing"><div class="section-head"><h2 class="section-title">Raw to<br><em>real.</em></h2><span class="section-number">06 / Post-production</span></div><div class="compare" id="compare"><div class="compare-label raw">RAW FOOTAGE</div><div class="compare-label final">FINAL EDIT</div><img src="assets/projects/project-01/raw.jpg" alt="Raw footage"><div class="after"><img src="assets/projects/project-01/final.jpg" alt="Final edit"></div><div class="compare-line"></div><div class="compare-handle">↔</div><input type="range" min="0" max="100" value="50" aria-label="Compare raw and final edit"></div></section>
+<section id="about"><div class="about-grid"><div class="portrait"><img src="assets/about/anugrah.jpg" alt="Anugrah behind the camera"></div><div class="about-copy"><div class="kicker">07 / Behind the work</div><h2 class="big">I like turning ordinary moments into something worth watching.</h2><p>For Anugrah, visual storytelling is not just about pressing record. It is about noticing the frame, understanding the moment, shaping the footage and finding the final rhythm that makes an idea feel alive.</p><br><p>From production and photography to videography and editing, he works across the process to create visuals that feel intentional, human and memorable.</p></div></div></section>
+<section id="bts">
+  <div class="section-head">
+    <h2 class="section-title">Behind<br>the <em>frame.</em></h2>
+    <span class="section-number">08 / BTS</span>
+  </div>
+
+  <div class="bts-strip">
+    <div class="photo contain">
+      <img src="assets/bts/02.jpg" alt="Behind the scenes camera">
+    </div>
+
+    <div class="photo contain">
+      <video controls playsinline preload="metadata">
+        <source src="assets/bts/video.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="photo contain">
+      <img src="assets/bts/timeline.png" alt="Editing timeline">
+    </div>
+  </div>
+</section>
+<section id="services"><div class="services"><div><div class="kicker">09 / What I do</div><h2 class="section-title">Creative<br><em>production.</em></h2></div><div class="service-list"><div class="service">Photography <span>01</span></div><div class="service">Videography <span>02</span></div><div class="service">Video Editing <span>03</span></div><div class="service">Content Production <span>04</span></div><div class="service">Creative Production <span>05</span></div><div class="service">Visual Storytelling <span>06</span></div><div class="service">Post-Production <span>07</span></div></div></div></section>
+<section id="experience"><div class="section-head"><h2 class="section-title">The<br><em>journey.</em></h2><span class="section-number">10 / Experience</span></div><div class="timeline"><div class="timeline-item"><span class="timeline-year">2026</span><span class="timeline-role">Media Production Lead</span><span class="timeline-desc">Production, visual content, photography, videography, editing and creative coordination.</span></div><div class="timeline-item"><span class="timeline-year">2025</span><span class="timeline-role">Creative Production</span><span class="timeline-desc">Selected media projects, campaign content and visual storytelling work.</span></div><div class="timeline-item"><span class="timeline-year">Earlier</span><span class="timeline-role">Visual Work</span><span class="timeline-desc">Personal, event and creative projects that shaped the visual language behind the work.</span></div></div></section>
+<section id="showreel"><div class="section-head"><h2 class="section-title">The<br><em>showreel.</em></h2><span class="section-number">11 / 2026</span></div><div class="video-feature"><video controls playsinline poster="assets/showreel/showreel-poster.jpg"><source src="assets/showreel/showreel.mp4" type="video/mp4"></video></div></section>
+<section id="contact" class="contact"><div><div class="kicker">12 / Let's make something</div><h2 class="contact-title">Have an<br><em>idea?</em></h2></div><div class="contact-bottom"><p class="contact-copy">A story worth telling starts with a conversation. For productions, campaigns, photography, video or creative collaborations, get in touch.</p><a class="contact-email" href="mailto:anugrahk088@gmail.com">anugrahk088@gmail.com ↗</a></div></section>
+<footer><span>ANUGRAH · MEDIA PRODUCTION</span><span>© 2026 · ALL RIGHTS RESERVED</span><a href="#top">BACK TO TOP ↑</a></footer>
+<div class="lightbox" id="lightbox"><button class="close" id="closeLightbox">CLOSE ×</button><img id="lightboxImage" src="" alt=""></div>
+<div class="project-modal" id="projectModal"><button class="close" id="closeProject">CLOSE ×</button><div class="project-inner" id="projectContent"></div></div>
+<script>
+const cursor=document.querySelector('.cursor');
+if(window.matchMedia('(pointer:fine)').matches){window.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});document.querySelectorAll('a,button,.photo,.work-visual').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('big'));el.addEventListener('mouseleave',()=>cursor.classList.remove('big'))})}else cursor.remove();
+const compare=document.querySelector('#compare');
+if(compare){
+  const range=compare.querySelector('input');
+  if(range) range.addEventListener('input',()=>compare.style.setProperty('--split',range.value+'%'));
+
+  /* Make the comparison frame match the actual image dimensions.
+     This prevents cropping/stretching when the source images are not 16:9. */
+  const compareImage=compare.querySelector('img');
+  const fitCompareFrame=()=>{
+    if(!compareImage || !compareImage.naturalWidth || !compareImage.naturalHeight) return;
+    compare.style.aspectRatio=compareImage.naturalWidth+'/'+compareImage.naturalHeight;
+    compare.style.height='auto';
+  };
+  if(compareImage){
+    if(compareImage.complete) fitCompareFrame();
+    else compareImage.addEventListener('load',fitCompareFrame,{once:true});
+  }
+  window.addEventListener('resize',fitCompareFrame);
+}
+const lightbox=document.querySelector('#lightbox');const lightboxImage=document.querySelector('#lightboxImage');document.querySelectorAll('[data-lightbox]').forEach(el=>el.addEventListener('click',()=>{lightboxImage.src=el.dataset.lightbox;lightbox.classList.add('open');document.body.classList.add('no-scroll')}));const closeLightbox=()=>{lightbox.classList.remove('open');lightboxImage.src='';document.body.classList.remove('no-scroll')};document.querySelector('#closeLightbox').addEventListener('click',closeLightbox);lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});
+const projects={
+p1:{meta:'01 / Performance · Photography',title:'The First Frame',desc:'A performance-focused visual series built around movement, expression, colour and precise moments captured through the lens.',role:'Photographer / Visual Storyteller',hero:'assets/projects/project-01/cover.jpg',gallery:['assets/photography/IMG_2377.JPG','assets/photography/IMG_2390.JPG','assets/photography/IMG_2394.JPG','assets/photography/IMG_2392.JPG','assets/photography/IMG_2401.JPG','assets/photography/IMG_2373.JPG','assets/photography/IMG_0219.JPG']},
+p2:{meta:'02 / Campaign · Video',title:'A Day with Tiny Tom',desc:'A short-form production following a day through camera work, locations, movement and character moments. The footage shows the production process as much as the final story.',role:'Videographer / Production / Editor',video:'assets/projects/project-02/video.mp4',hero:'assets/projects/project-02/cover.jpg'},
+p3:{meta:'03 / Short Film · Motion',title:'Motion & Memory',desc:'A cinematic short built around physicality, movement, atmosphere and fast visual storytelling, with footage shaped through editing into a strong visual rhythm.',role:'Videographer / Editor',video:'assets/projects/project-03/video.mp4',hero:'assets/projects/project-03/cover.jpg',gallery:[{type:'video',src:'assets/projects/project-03/project-03-production.mp4'},{type:'video',src:'assets/projects/project-03/project-03-editing.mp4'},{type:'image',src:'assets/projects/project-03/edit-timeline.jpg',optional:true}]}
+};
+function fitRotatedProjectCover(container,img){
+  const apply=()=>{
+    if(!img.naturalWidth||!img.naturalHeight)return;
+
+    /*
+      PROJECT MODAL ONLY.
+      The source cover is sideways, so rotate it -90deg.
+      Size the frame from the FINAL (rotated) aspect ratio.
+      The image itself is absolutely centered, so it cannot
+      create the large empty area above/below the photograph.
+    */
+    const frameW = container.clientWidth;
+    const finalRatio = img.naturalHeight / img.naturalWidth;
+    const frameH = frameW / finalRatio;
+
+    container.style.width = '100%';
+    container.style.height = frameH + 'px';
+    container.style.aspectRatio = 'auto';
+    container.style.position = 'relative';
+    container.style.display = 'block';
+    container.style.overflow = 'hidden';
+
+    /*
+      Before rotation the image box must have the dimensions
+      swapped. After -90deg rotation it becomes exactly
+      frameW × frameH.
+    */
+    img.style.position = 'absolute';
+    img.style.left = '50%';
+    img.style.top = '50%';
+    img.style.width = frameH + 'px';
+    img.style.height = frameW + 'px';
+    img.style.maxWidth = 'none';
+    img.style.maxHeight = 'none';
+    img.style.objectFit = 'fill';
+    img.style.margin = '0';
+    img.style.transform = 'translate(-50%,-50%) rotate(-90deg)';
+    img.style.transformOrigin = 'center';
+  };
+
+  if(img.complete) apply();
+  else img.addEventListener('load',apply,{once:true});
+
+  window.addEventListener('resize',apply);
+}
+
+const modal=document.querySelector('#projectModal'),content=document.querySelector('#projectContent');function openProject(id){const p=projects[id];if(!p)return;content.innerHTML=`<div class="project-top"><div><div class="project-kicker">${p.meta}</div><h2 class="project-title">${p.title}</h2></div><p class="project-intro">${p.desc}</p></div><div class="project-media ${id==='p1'?'project-cover-landscape':''}">${p.video?`<video controls playsinline poster="${p.hero}"><source src="${p.video}" type="video/mp4"></video>`:`<img src="${p.hero}" alt="${p.title}">`}</div>${p.gallery?.length ? `${p.gallery?.length ? `<div class="project-gallery">${p.gallery.map((item,i)=>{const src=typeof item==='string'?item:item.src;const type=typeof item==='string'?'image':item.type;const optional=typeof item==='object'&&item.optional;return `<div class="gallery-item">${type==='video'?`<video controls playsinline preload="metadata"><source src="${src}" type="video/mp4"></video>`:`<img src="${src}" alt="${p.title} — ${i+1}" ${optional?'onerror="this.closest(\'.gallery-item\').remove()"':''}>`}</div>`}).join('')}</div>` : ''}` : ''}<div class="project-role">Role · ${p.role}</div><p class="project-description">${p.desc}</p><div class="modal-nav"><span>ANUGRAH · PROJECT ${id.slice(1).padStart(2,'0')}</span><button id="modalCloseBottom">CLOSE PROJECT ×</button></div>`;modal.classList.add('open');document.body.classList.add('no-scroll');document.querySelector('#modalCloseBottom').onclick=closeProject;const cover=content.querySelector('.project-cover-landscape');if(cover){const coverImg=cover.querySelector('img');fitRotatedProjectCover(cover,coverImg)}modal.scrollTop=0}
+function closeProject(){modal.classList.remove('open');document.body.classList.remove('no-scroll');content.innerHTML=''}document.querySelectorAll('[data-project]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();openProject(el.dataset.project)}));document.querySelector('#closeProject').addEventListener('click',closeProject);modal.addEventListener('click',e=>{if(e.target===modal)closeProject()});
+document.querySelectorAll('#video .video-tile').forEach(tile=>{const video=tile.querySelector('video');const play=tile.querySelector('.video-play');if(play&&video)play.addEventListener('click',e=>{e.stopPropagation();video.paused?video.play():video.pause()})});
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{const v=entry.target;if(!entry.isIntersecting&&!v.paused)v.pause()}),{threshold:.05});document.querySelectorAll('video').forEach(v=>observer.observe(v));
+
+/* Homepage Project 01 cover: fit the frame to the rotated source image. */
+function fitHomepageProjectCover(container, img){
+  const apply = () => {
+    if(!img.naturalWidth || !img.naturalHeight) return;
+
+    const frameW = container.clientWidth;
+    // After rotating -90deg, source H/W becomes the final landscape ratio.
+    const finalRatio = img.naturalHeight / img.naturalWidth;
+    const frameH = frameW / finalRatio;
+
+    container.style.width = '100%';
+    container.style.height = frameH + 'px';
+    container.style.aspectRatio = 'auto';
+    container.style.position = 'relative';
+    container.style.display = 'block';
+    container.style.overflow = 'hidden';
+
+    // Swap dimensions before rotation so the rotated image fills the frame exactly.
+    img.style.position = 'absolute';
+    img.style.left = '50%';
+    img.style.top = '50%';
+    img.style.width = frameH + 'px';
+    img.style.height = frameW + 'px';
+    img.style.maxWidth = 'none';
+    img.style.maxHeight = 'none';
+    img.style.objectFit = 'fill';
+    img.style.margin = '0';
+    img.style.transform = 'translate(-50%,-50%) rotate(-90deg) scale(1.06)';
+    img.style.transformOrigin = 'center';
+  };
+
+  if(img.complete) apply();
+  else img.addEventListener('load', apply, {once:true});
+  window.addEventListener('resize', apply);
+}
+
+/* Homepage Project 02 only: make its frame follow the actual video aspect ratio. */
+function fitHomepageProject02(container, video){
+  const apply = () => {
+    if(!video.videoWidth || !video.videoHeight) return;
+
+    container.style.width = '100%';
+    container.style.height = 'auto';
+    container.style.aspectRatio = video.videoWidth + ' / ' + video.videoHeight;
+
+    video.style.width = '100%';
+    video.style.height = 'auto';
+    video.style.objectFit = 'contain';
+  };
+
+  if(video.readyState >= 1) apply();
+  video.addEventListener('loadedmetadata', apply);
+  window.addEventListener('resize', apply);
+}
+
+const homepageProject02 = document.querySelector('.work-visual.project-02-home');
+if(homepageProject02){
+  const homepageProject02Video = homepageProject02.querySelector('video');
+  if(homepageProject02Video) fitHomepageProject02(homepageProject02, homepageProject02Video);
+}
+
+const homepageCover = document.querySelector('.work-visual.project-cover-home');
+if(homepageCover){
+  const homepageCoverImg = homepageCover.querySelector('img');
+  if(homepageCoverImg) fitHomepageProjectCover(homepageCover, homepageCoverImg);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+REPLACE THESE PLACEHOLDERS WITH ANUGRAH'S REAL MEDIA
+
+hero/
+  hero-video.mp4       Main cinematic hero video
+  hero-image.jpg       Hero fallback/poster
+
+about/
+  anugrah.jpg          Authentic portrait / behind-camera image
+
+projects/
+  project-01/cover.jpg, 01.jpg, 02.jpg
+  project-02/cover.jpg, 01.jpg, 02.jpg, raw.jpg, final.jpg
+  project-03/cover.jpg, video.mp4
+
+bts/
+  01.jpg  Camera/setup
+  02.jpg  Production/on-location
+  03.jpg  Editing/timeline
+
+showreel/
+  showreel.mp4
+  showreel-poster.jpg
